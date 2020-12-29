@@ -1,0 +1,10 @@
+
+<div style="border: black outset 2px ; text-align: center;width: 500px">
+<h3>Id: {{ student.id}}</h3>
+<h3>Name: {{ student.name}}</h3>
+<h3>Gender: {{ student.gender | uppercase}}</h3>
+<h3>Mark: {{ student.mark}}</h3>
+<input type="range" (change)="setMarkStudent($event.target.value)">
+<input type="range" [(ngModel)]="student.mark" >
+<h3>Avatar</h3><img [src]=student.avatar>
+</div>
